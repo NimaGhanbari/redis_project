@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'redis_app',
+    
     
 ]
 
@@ -77,8 +79,10 @@ WSGI_APPLICATION = 'Redis_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'redis_project',                      
+        'USER': 'postgres',
+        'PASSWORD': 'nima7898',
     }
 }
 
